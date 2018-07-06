@@ -1,0 +1,44 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center color="dark">
+    	<ion-icon ios="ios-menu" md="md-menu"></ion-icon> &nbsp;Menu
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only color="dark">
+            <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>LogOut
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+ <!--  <ion-navbar  hideBackButton>
+    <ion-title>Menu</ion-title>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<!-- <div class="padding"> -->
+	<ion-grid>
+	    <button ion-button full round large (tap)="goToParametrage()" padding>
+	    	<ion-icon ios="ios-switch" md="md-switch" isActive="false"></ion-icon>&nbsp;Paramétrage
+	    </button>  
+	      <button ion-button full round large (tap)='goToCollecte()' padding>
+	      	<ion-icon ios="ios-map" md="md-map" isActive="false"></ion-icon>&nbsp;Collecte
+	    </button>  
+	     <button ion-button full round large (tap)='synchronisation()' padding>
+	      	<ion-icon ios="ios-cloud-upload" md="md-cloud-upload" isActive="false"></ion-icon>&nbsp;Synchronisation
+	    </button>  
+	</ion-grid>
+	<!-- </div> -->
+
+</ion-content>
+
+

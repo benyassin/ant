@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>
+     	<ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>&nbsp;Login
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<form [formGroup]="authForm">
+		<ion-list>
+			<ion-item>
+				<ion-label color="primary" ><ion-icon ios="ios-person" md="md-person"></ion-icon>&nbsp;Login</ion-label>
+				<ion-input type="text" [formControl]="authForm.controls['login']" ></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label color="primary" ><ion-icon ios="ios-key" md="md-key"></ion-icon>&nbsp;Mot de Passe</ion-label>
+				<ion-input type="password" [formControl]="authForm.controls['password']" ></ion-input>
+			</ion-item>
+		</ion-list>
+
+	    <div padding>
+	        <button ion-button full round (tap)="login()" padding>
+	        	<ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>&nbsp;Connexion
+	        </button>  
+	          <button ion-button full round (tap)='vider()' padding>
+	          	<ion-icon ios="ios-trash" md="md-trash"></ion-icon>&nbsp;Vider la liste des utilisateurs
+	        </button> 
+	        <button ion-button full round (tap)='getAll()' padding>
+	          	<ion-icon ios="ios-trash" md="md-trash"></ion-icon>&nbsp;Nombre d'utilisateurs
+	        </button>  
+		</div>
+	</form>
+
+
+</ion-content>
