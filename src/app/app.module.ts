@@ -19,6 +19,8 @@ import { CollectePage } from '../pages/collecte/collecte';
 
 
 import { LoginDbProvider } from '../providers/login-db/login-db';
+import { GlobalsProvider } from '../providers/globals/globals';
+// import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { LoginDbProvider } from '../providers/login-db/login-db';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SQLite,
     Toast,
-    LoginDbProvider
+    LoginDbProvider,
+    GlobalsProvider
+    // GlobalProvider
   ]
 })
 export class AppModule {}

@@ -1,14 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-/*
-  Generated class for the LoginDbProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-
-import { SQLiteObject } from '@ionic-native/sqlite';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+// import { SQLiteMock } from '@ionic-native-mocks/sqlite';
 
 
 @Injectable()
@@ -16,11 +10,11 @@ export class LoginDbProvider {
 
 	db: SQLiteObject = null;
 
-	constructor(public http: HttpClient) {
+	constructor(public http: HttpClient, private sqlite: SQLite) {
 		console.log('Hello LoginDbProvider Provider');
 	}
 
-	setDatabase(db: SQLiteObject){
+	setDatabase(db: any){
 		if(this.db === null){
 			this.db = db;
 		}
@@ -33,9 +27,6 @@ export class LoginDbProvider {
 	}
 
 	create(user: any){
-		// let sql = "INSERT INTO users (login, password, token, email, role, nom, prenom, tel, userId, region, province) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
-		// return this.db.executeSql(sql, [user.login, user.password, user.token, user.email, user.role, user.nom, user.prenom, user.tel, 
-		// 	user.userId, user.region,user.province]);
 		let sql = "INSERT INTO users (login, password) VALUES(?,?)";
 		return this.db.executeSql(sql, [user.login, user.password]);
 	}
@@ -44,7 +35,7 @@ export class LoginDbProvider {
 		let sql = 'SELECT * FROM users WHERE login=? AND password =?';
 		return this.db.executeSql(sql, [user.login, user.password])
 		.then(response => {
-			return Promise.resolve( response.rows.length );
+			return Promise.resolve(response.rows.length);
 		})
 		.catch(error => Promise.reject(error));
 	}

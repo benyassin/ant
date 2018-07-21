@@ -16,18 +16,22 @@ import { CollectePage } from '../pages/collecte/collecte';
 @Component({
   templateUrl: 'app.html'
 })
+
+
+
 export class SayGISM {
  
   rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar,public splashScreen: SplashScreen, public logindb: LoginDbProvider, public sqlite: SQLite) {
 
+
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-       this.createDatabase();
+        // Okay, so the platform is ready and our plugins are available.
+        // Here you can do any higher level native things you might need.
+        statusBar.styleDefault();
+        splashScreen.hide();
+        this.createDatabase();
     });
 
   }
