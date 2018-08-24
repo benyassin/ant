@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title text-center>
@@ -37,4 +37,29 @@
 	</form>
 
 
+</ion-content> -->
+
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-slides pager="false" autoplay="2000" loop="true" speed="1500" effect="fade">
+    <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds" [ngStyle]="{'background-image': 'url(' + background +')'}">
+    </ion-slide>
+  </ion-slides>
+  <div class="login-container">
+    <img class="logo" src="assets/imgs/beeGO.png" />
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <strong>Se Connecter:</strong>
+      <ion-item>
+        <ion-input type="text" placeholder="Utilisateur" formControlName="login"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Mot de Passe" formControlName="password"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" margin color="bee" [disabled]="!loginForm.valid">LOGIN</button>
+      <!-- <p (click)="openResetPassword()"><strong>Forgot your password?</strong></p> -->
+    </form>
+  </div>
 </ion-content>

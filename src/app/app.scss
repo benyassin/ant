@@ -28,3 +28,30 @@
 }
 
 
+/* Center the title of every page & modal on the App */
+.title.title-md {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 70%;
+  text-align: center;
+}
+
+/* @media only screen and (orientation: landscape)  {  */
+   .QuestListe {
+    .modal-wrapper {
+      position: absolute;
+      top:35% !important;
+      left: 25% !important;
+      display: block;
+      width: 50% !important;
+      height: 30% !important;
+    } 
+  }
+/* } */
+
+
+
+

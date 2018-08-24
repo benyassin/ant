@@ -9,6 +9,8 @@ import { Http, HttpModule } from '@angular/http';
 
 import { SQLite } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
+import { Geolocation ,GeolocationOptions ,Geoposition ,PositionError } from '@ionic-native/geolocation'; 
+
 
 
 import { SayGISM } from './app.component';
@@ -50,6 +52,7 @@ import { GlobalsProvider } from '../providers/globals/globals';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SQLite,
     Toast,
+    Geolocation,
     LoginDbProvider,
     GlobalsProvider
     // GlobalProvider

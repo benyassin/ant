@@ -17,14 +17,14 @@ import { CollectePage } from '../pages/collecte/collecte';
   templateUrl: 'app.html'
 })
 
-
-
 export class SayGISM {
  
-  rootPage:any = LoginPage;
+
+  rootPage:any;
+  // rootPage:any = CollectePage;
+  // rootPage:any = MenuPage;
 
   constructor(platform: Platform, statusBar: StatusBar,public splashScreen: SplashScreen, public logindb: LoginDbProvider, public sqlite: SQLite) {
-
 
     platform.ready().then(() => {
         // Okay, so the platform is ready and our plugins are available.
@@ -32,6 +32,7 @@ export class SayGISM {
         statusBar.styleDefault();
         splashScreen.hide();
         this.createDatabase();
+        this.rootPage = MenuPage;
     });
 
   }
@@ -47,7 +48,7 @@ export class SayGISM {
     })
     .then(() =>{
       this.splashScreen.hide();
-      this.rootPage = 'HomePage';
+      // this.rootPage = MenuPage;
     })
     .catch(error =>{
       console.error(error);

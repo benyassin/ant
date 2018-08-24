@@ -1,0 +1,542 @@
+div.form-field-type-htmlelement{
+  background-color: #2081c3;
+}
+
+/*.leaflet-marker-pane {
+    z-index: 78;
+}*/
+
+.well{
+  /*background-color: #3a3b3e;*/
+/*  background-color: #yellow;
+  z-index: 4;*/
+}
+
+  /*.ui-select-choices {*/
+  /*.choices__list {*/
+  .choices__list.choices__list--dropdown {
+        position: fixed;
+        /*top: 5%;
+        left: 45%*/;
+        top: inherit;
+        left: inherit;
+        width: inherit;
+        /*background-color: red;
+        z-index: 99999;*/
+  }
+
+
+#addStepWrapper{
+  overflow:hidden !important;
+}
+
+.txtpisteClass {
+    position: absolute;
+    width:1000px;
+    font-size:15px;
+    color:white;
+     text-shadow: 2px 2px #FF0000;
+}
+
+.txtpisteClassSync {
+    position: absolute;
+    width:1000px;
+    font-size:15px;
+    color:white;
+     text-shadow: 2px 2px #080893;
+}
+
+.txtpisteClassNoSync {
+    position: absolute;
+    width:1000px;
+    font-size:15px;
+    color:white;
+     text-shadow: 2px 2px #890202;
+     /*text-shadow: 2px 2px #0414f4;*/
+}
+
+.statIcons{
+  font-size: 18px;
+}
+
+.statSync{
+  color:green;
+}
+.statNonSync{
+  color:red;
+}
+
+.statSum{
+  color:blue;
+}
+
+
+.PopupReSyncheonize  .popup{
+   border: 5px solid #011627;
+}
+
+.popup {
+    border: 5px solid #011627;
+}
+
+.popup-body {
+    /*border: 5px solid blue;*/
+}
+
+.popup-buttons .button {
+    font-size: 12px;
+}
+
+.ion-folder{
+   color:green;
+  font-size: 20px;
+}
+
+.leaflet-vertex-icon.marker-snapped,
+      .leaflet-drawing-icon.marker-snapped {
+        /*opacity: 1!important;*/
+        width:200px;
+        height:200px;
+      }
+
+    .leaflet-draw-icon{
+        height: 50px;
+        width: 50px;
+      }
+
+      .leaflet-editing-icon{
+        height: 50px;
+        width: 50px;
+      }
+      /*leaflet-marker-icon leaflet-div-icon leaflet-editing-icon leaflet-zoom-animated leaflet-clickable marker-snapped*/
+.leaflet-map-pane {
+    z-index: 2 !important;
+}
+
+img.leaflet-tile{
+  z-index: 6 !important;
+}
+
+.leaflet-google-layer {
+    z-index: 1 !important;
+}
+
+ div.topologySplit{
+     /*position: absolute;*/
+    /*top: 592px;*/
+    /*left: 2px;*/
+  }
+
+    div.topologyMerge{
+     position: absolute;
+    top: 324px;
+    /*left: 2px;*/
+  }
+
+ div.topologySnap{
+     position: absolute;
+    top: 358px;
+    /*left: 2px;*/
+  }
+
+/*input[type="range"]::-webkit-slider-thumb {*/
+.rangeSnap {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: red;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 1px 3px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    -webkit-appearance: none; 
+  }
+
+
+    /*
+    Form validation CSS
+    */
+   
+    /** Styling for the username field **/
+    label.item.has-error {  
+      border-bottom: 2px solid red;
+    }
+     
+    /** Styling for the password field when an error exists**/
+    .error-container {
+      margin: 0;
+    }
+     
+    .error {
+      padding: 8px 8px;
+      font-family: "Arial Black", Gadget, sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #555;
+      vertical-align: middle;
+    }
+   
+    .error i {
+      font-size: 24px;
+      color: #B83E2C;  
+      vertical-align: middle;
+    }
+     
+    .last-error-container > .error {
+      padding: 10px 16px 0;
+    }
+     
+    .has-errors {
+      border-bottom: 1px solid #B83E2C;
+    }
+     
+    .no-errors {
+      border-bottom: 2px solid green;
+    }
+
+     /*----------------------------------------------------*/
+
+    i.headerIcon {
+      font-size: 30px;
+    }
+
+      .labelSupports{
+         color: yellow;
+         line-height: 2.8;
+         white-space:nowrap;
+         width: 40px;
+         text-shadow: 2px 1px #000;
+          text-align: center;
+       }
+
+       .labelUTM{
+         color: yellow;
+         line-height: 1;
+         white-space:nowrap;
+         width: 40px;
+         text-shadow: 2px 1px #000;
+         font-size: 150%;
+       }
+
+       .labelCOMMUNE{
+         color: #FFF;
+         line-height: 2.8;
+         white-space:nowrap;
+         width: 40px;
+         text-shadow: 2px 1px #000;
+          text-align: center;
+         /*font-size: 150%;*/
+       }
+
+
+       .labelParcelles{
+         color:#8470FF;
+         line-height: 1;
+         /*white-space:nowrap;*/
+         text-align: center;
+         /*width: 40px;*/
+         text-shadow: 2px 1px #000;
+         /*font-size: 150%;*/
+      }
+
+      .labelMappes{
+         color:#00FFFF;
+         line-height: 2.8;
+         text-shadow: 2px 1px #000;
+         text-align: center;
+      }
+
+        .labelPlle{
+         color:blue;
+         line-height: 2.8;
+         text-shadow: 2px 1px #fff;
+         /*text-align: center;*/
+         font-size: 140%;
+       }
+
+        .labelPlleBD{
+           color:#0000FF;
+           line-height: 2.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 140%;
+        }
+
+        .labelBloc{
+           color:red;
+           line-height: 2.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 230%;
+        }
+
+        .labelBlocBD{
+           color:#990000;
+           line-height: 2.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 230%;
+        }
+
+
+
+        /*------------------ Labels des geometries déssinées dans le module Collecte ---------------------*/
+        .labelPoint{
+           color:green;
+           line-height: 1.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        }
+         .labelPointBD{
+           color:#004c00;
+           line-height: 1.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+           /*z-index: 8888;*/
+        }
+
+        .labelPointSync{
+           color:#323232;
+           line-height: 1.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+           /*z-index: 8888;*/
+        }
+
+
+        .labelPolyline{
+           color:red;
+           line-height: 1.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        }
+         .labelPolylineBD{
+           color:#911111;
+           line-height: 1.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        }
+
+        .labelPolylineSync{
+           color:#323232;
+           line-height: 1.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        }
+
+         .labelPolygon{
+           color:blue;
+           line-height: 2.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        }
+        .labelPolygonBD{
+           color:#104e8b;
+           line-height: 2.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        }
+
+        .labelPolygonSync{
+           color:#323232;
+           line-height: 2.8;
+           text-shadow: 2px 1px #fff;
+           /*text-align: center;*/
+           font-size: 150%;
+        } 
+         
+     /*----------------- Libellés des données Supports  ----------------------*/
+
+         .labelPointSupport{
+            color:#006400;
+            line-height: 2.8;
+            text-shadow: 2px 1px #fff;
+            white-space:nowrap;
+            width: 40px;
+            font-size: 111%;
+        }
+         .labelPointSupportSync{
+            color:#006400;
+            line-height: 2.8;
+            text-shadow: 2px 1px #fff;
+            white-space:nowrap;
+            width: 40px;
+            font-size: 111%;
+        }
+        /*-------------------------*/
+        .labelPolylineSupport{
+            color:#600000;
+            line-height: 2.8;
+            text-shadow: 2px 1px #fff;
+            white-space:nowrap;
+            width: 40px;
+            font-size: 111%;
+        }
+        .labelPolylineSupportSync{
+            color:#600000;
+            line-height: 2.8;
+            text-shadow: 2px 1px #fff;
+            white-space:nowrap;
+            width: 40px;
+            font-size: 111%;
+        }
+       /*-------------------------*/
+         .labelPolygonSupport{
+            color:#006400;
+            line-height: 2.8;
+            text-shadow: 2px 1px #fff;
+            white-space:nowrap;
+            width: 40px;
+            font-size: 111%;
+        }
+        .labelPolygonSupportSync{
+            color:white;
+            line-height: 2.8;
+            text-shadow: 2px 1px #000;
+            white-space:nowrap;
+            width: 40px;
+            font-size: 111%;
+        }
+        /*---------------------------------------------------------------------------*/
+
+
+ 
+
+       /*---------------------------------------*/
+       /*---------------------------------------*/
+
+      .input-label{
+        /*font-size:6px; */
+      }
+
+      input[type="radio"]{
+        border:thin solid white;
+        text-align:center !important;
+      }
+
+     
+     .leaflet-naturel-toolbar .leaflet-draw-draw-naturel {
+        background-position: -62px -2px;
+      }
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-naturel {
+        background-position: -60px -1px;
+      }
+      .leaflet-draw-toolbar .leaflet-draw-draw-naturel {
+        background-color: #32ff1f;
+      }
+      /*******************************************/
+       .leaflet-marker-toolbar .leaflet-draw-draw-marker {
+        background-position: -62px -2px;
+      }
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-marker {
+        background-position: -60px -1px;
+      }
+      .leaflet-draw-toolbar .leaflet-draw-draw-marker {
+        background-color: #2aac65;
+        /*background-color: #2780ca;*/
+      }
+      .drawDetailsControl .leaflet-draw-toolbar .leaflet-draw-draw-marker {
+        background-color: #ffb805;
+      }
+      /*******************************************/
+         .leaflet-polyline-toolbar .leaflet-draw-draw-polyline {
+        background-position: -62px -2px;
+      }
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polyline {
+        background-position: -60px -1px;
+      }
+      .leaflet-draw-toolbar .leaflet-draw-draw-polyline {
+        background-color: #FF4500;
+        /*background-color: #0c7ad6;*/
+      }
+      /*******************************************/
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectiligne {
+        background-position: -62px -2px;
+      }
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectiligne {
+        background-position: -60px -1px;
+      }
+      .leaflet-draw-toolbar .leaflet-draw-draw-rectiligne {
+        background-color: #F57C63;
+      }
+
+       .drawDetailsControl .leaflet-draw-toolbar .leaflet-draw-draw-rectiligne {
+        background-color: #931993;
+      }
+      /*******************************************/
+      .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+        /*background-color: #2aac65;*/
+        /*background-color: #2780ca;*/
+        background-color: #63D2FF;
+      }
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+        background-position: -62px -2px;
+      }
+      .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+        background-position: -60px -1px;
+      }
+      .menuGauche{
+      /*  margin:0;
+        padding:0;
+        border:0;*/
+        background-color: red;
+        /*background-image: url(img/Carto/geocoding_logo.jpg);*/
+      }
+      .leaflet-bar a {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        /* border-bottom-color: rgb(204, 204, 204); */
+        color: #444;
+        display: block;
+        height: 26px;
+        width: 26px;
+        line-height: 1.45 !important;
+        text-align: center;
+        text-decoration: none;
+        font: bold 18px'Lucida Console', Monaco, monospace;
+      }
+      .col{
+       /* height: 44px; */
+      }    
+
+       .radio-icon{
+      /*  color:#2aac65;  */ 
+      }
+
+      .radio-icon{
+        visibility: visible!important;
+      }
+
+      .radio-icon:before{
+        content: "";
+        border:1px solid black;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        overflow:hidden;
+      }
+
+      .item-radio input:checked + .radio-content .radio-icon:before{
+        color: #fff;
+        /*background-color: #2aac65;  */
+        background-color: #2081C3;  
+      }
+
+      /*  CSS Validation Modal Eploitation  */
+      .hasErrors {
+       /* border-left: 3px solid #cc2511;
+        border-right: 3px solid #cc2511; */
+        border-bottom: 3px solid #cc2511;
+      }
+      .noErrors {
+        /* border-left: 3px solid #3d8b3d;
+        border-right: 3px solid #3d8b3d;*/
+        border-bottom: 3px solid #3d8b3d;
+      }

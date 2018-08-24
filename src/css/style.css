@@ -1,0 +1,61 @@
+/* Empty. Add your own CSS if you like */
+
+
+.ion-person-add{
+  color:#33cd5f;
+  font-size: 30px;
+ }
+ .ion-ios-telephone{
+  color:#33cd5f;
+  font-size: 30px;
+ }
+ .ion-person{
+  color:#2081C3;
+  font-size: 30px;
+ } 
+ .ion-social-buffer-outline{
+  color:#33cd5f;
+  font-size: 30px;
+ }
+  .profil{
+  color:white;
+  font-size: 25px;
+ }
+ .ion-email{
+  color:blue;
+  font-size: 30px;
+ }
+.ion-key{
+  color:#2081C3;
+  font-size: 35px;
+}
+.ion-android-phone-portrait{
+  color:blue;
+  font-size: 30px;
+ }
+
+
+#map {
+    height: 90%;
+    /* Change 100% to 400px and the map will display   */ 
+}
+
+.BackImg {
+    background-image: url(../img/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    width: 40%;
+    height: 50%;
+    /*margin: auto;
+    z-index: 2;
+    position: relative;*/
+    
+}
+
+.view-with-bg{
+  .view-content {
+    background-image: url('../img/logo.jpg');
+    background-size: cover ;
+  }
+}

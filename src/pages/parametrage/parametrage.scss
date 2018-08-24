@@ -1,3 +1,28 @@
 page-parametrage {
+    .card {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+      }
+    .label{
+        color: black;
+        padding:0;
+        margin: 0;
+    }
+    .item-divider{
+        font-size:2.0rem;
+        padding: 0;
+    }
 
+    .item-divider-md .label:first-child{
+        color:white;
+    }
+
+    .item .label:first-child{
+        margin:0;
+    }
+
+    ion-grid {
+        // height: 20%;
+      }
 }
