@@ -43,12 +43,12 @@
   <ion-navbar transparent>
   </ion-navbar>
 </ion-header>
-<ion-content>
+<ion-content >
   <ion-slides pager="false" autoplay="2000" loop="true" speed="1500" effect="fade">
     <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds" [ngStyle]="{'background-image': 'url(' + background +')'}">
     </ion-slide>
   </ion-slides>
-  <div class="login-container">
+  <div class="login-container" style="height: 100vh;">
     <img class="logo" src="assets/imgs/beeGO.png" />
     <form [formGroup]="loginForm" (ngSubmit)="login()">
       <strong>Se Connecter:</strong>
@@ -61,5 +61,8 @@
       <button ion-button type="submit" margin color="bee" [disabled]="!loginForm.valid">LOGIN</button>
       <!-- <p (click)="openResetPassword()"><strong>Forgot your password?</strong></p> -->
     </form>
+
+    <!-- <button ion-button margin color="bee" (click)="vider()">VIDER</button> -->
+    <!-- <button ion-button margin color="bee" (click)="checkUserInServer()">TEST</button> -->
   </div>
 </ion-content>

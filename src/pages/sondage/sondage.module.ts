@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { CollectePage } from './collecte';
+import { SondagePage } from './sondage';
 
 // @NgModule({
 //   declarations: [
-//     CollectePage,
+//     SondagePage,
 //   ],
 //   imports: [
-//     IonicPageModule.forChild(CollectePage),
+//     IonicPageModule.forChild(SondagePage),
 //   ],
 // })
 
-
   @NgModule({
     declarations: [
-      CollectePage
+      SondagePage
     ],
     imports: [
-      IonicPageModule.forChild(CollectePage)
+      IonicPageModule.forChild(SondagePage)
     ],
     entryComponents: [
-      CollectePage
+      SondagePage
     ]
   })
-
-export class CollectePageModule {}
+export class SondagePageModule {}

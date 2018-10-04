@@ -10,26 +10,30 @@
 
   <ion-toolbar color="bee">
       <ion-buttons left>
-          <button ion-button icon-only color="dark" (click)="downloadParametrageServer($event)">
-                <ion-icon ios="ios-cloud-download" md="md-cloud-download"></ion-icon>DownLoad
+          <button ion-button icon-only color="dark" (click)="goToMenu()">
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>Back
           </button>
         </ion-buttons>
+
       <ion-title text-center color="dark">
           <ion-icon name="cog" class="text-dark"></ion-icon>
           <span class="text-dark">Paramétrage</span>
       </ion-title>
+
       <ion-buttons right>
-        <button ion-button icon-only color="dark" (click)="goToMenu()">
-              <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>Back
-        </button>
-      </ion-buttons>
+          <button ion-button icon-only color="dark" (click)="downloadParametrageServer($event)">
+                <ion-icon ios="ios-cloud-download" md="md-cloud-download"></ion-icon>DownLoad
+          </button>
+        </ion-buttons>
       
     </ion-toolbar>
 
 </ion-header>
 
 <ion-content class="common-bg">
-
+    <button ion-button icon-only color="dark" (click)="testStorage()">
+        <ion-icon ios="ios-cloud-download" md="md-cloud-download"></ion-icon>DownLoad
+  </button>
     <!-- <ion-item-divider color="secondary" class="bold">Projets & Questionnaires
       <button item-content  ion-button margin item-right color="bee" (click)="downloadParametrageServer($event)">Reload</button>
     </ion-item-divider> -->
@@ -45,7 +49,7 @@
         <ion-row>
           <ion-col>
               <ion-list  radio-group [(ngModel)]="compaignSelected">
-                  <ion-item *ngFor="let compaign of compaigns">         
+                  <ion-item *ngFor="let compaign of CCompaigns">         
                     <ion-label>{{compaign.name}}</ion-label>
                   <ion-radio color="danger" value="{{compaign.id}}" item-left (ionSelect)="compaignChecked(compaign.id)"></ion-radio>       
                   </ion-item>    
@@ -65,15 +69,15 @@
             </ion-row> -->
           <ion-row>
               <ion-col>
-                  <ion-list *ngFor="let form of forms">
-                      <ion-item  *ngIf="form.id_projet == compaignSelected">
+                  <ion-list *ngFor="let form of FForms">
+                      <ion-item  *ngIf="form.id_campaign == compaignSelected">
                           <ion-grid  margin-left>
                               <ion-row  >
                                   <ion-col center col-2>
                                       <div item-center [ngStyle]="{'width':'20px', 'height':'20px', 'background-color': form.color}" ></div>
                                   </ion-col>
                                   <ion-col center col-8>
-                                      {{form.name}} - {{form.color}} - {{form.id_projet}}
+                                      {{form.name}} - {{form.color}} - {{form.id_campaign}} - {{form.geometry}}
                                   </ion-col>
                                 </ion-row>
                           </ion-grid>                      
@@ -94,15 +98,15 @@
             </ion-row> -->
           <ion-row>
             <ion-col>
-                <ion-list *ngFor="let zone of zones">
-                    <ion-item *ngIf="zone.id_projet == compaignSelected">
+                <ion-list *ngFor="let zone of ZZones">
+                    <ion-item *ngIf="zone.id_campaign == compaignSelected">
                         <ion-grid margin-left>
                             <ion-row>
                                 <ion-col center col-2 text-left>
                                     <img class="logo" src="assets/imgs/ruche.png" [ngStyle]="{'width':'20px', 'height':'20px'}" />
                                 </ion-col>
                                 <ion-col center col-8>
-                                    {{zone.name}} - {{zone.id_projet}}
+                                    {{zone.name}} - {{zone.id_campaign}}
                                 </ion-col>
                               </ion-row>
                         </ion-grid>   

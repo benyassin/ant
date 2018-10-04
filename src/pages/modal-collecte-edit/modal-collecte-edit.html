@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Liste des collectes</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="fermerModal()">X</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list radio-group>
+
+    <!-- <ion-list-header> Action </ion-list-header> -->
+    <ion-item *ngFor="let lc of listCollects">
+      <ion-label>{{ lc.row_id }} - {{ lc.numero }} - {{ lc.id_campaign }}</ion-label>
+      <ion-radio color="bee" item-left [value]="lc.row_id" (click)="getSelectedCollect(lc.row_id,lc.numero,lc.id_campaign)"
+       [ngStyle]="{'color': 'black'}"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

@@ -1,3 +1,56 @@
 page-collecte {
+    .labelZones{
+        color: yellow;
+        line-height: 2.8;
+        white-space:nowrap;
+        width: 40px;
+        text-shadow: 2px 1px #000;
+        text-align: center;
+    }
+   
+    .alert-head{
+        background-color:#ebe856 !important;
+        z-index: 99999;
+    }
+    .alert-message{
+        background-color:#ebe856 !important;
+    }
+
+    .controlsLeaflet{
+        background-color: #ebe856 !important;
+    }
+
+    .leaflet-control-layers{
+        background-color: #ebe856 !important;
+    }
+
+    .gin-control-zoom-in{
+        background-color: #ebe856 !important;
+    }
+    .gin-control-zoom-home{
+        background-color: #ebe856 !important;
+    }
+    .gin-control-zoom-out{
+        background-color: #ebe856 !important;
+    }
+    .leaflet-draw-draw-marker{
+        background-color: #ebe856 !important;
+    }
+    .leaflet-draw-draw-polyline{
+        background-color: #ebe856 !important;
+    }
+    .leaflet-draw-draw-polygon{
+        background-color: #ebe856 !important;
+    }
+
+    .leaflet-draw-edit-remove{
+        background-color: #ebe856 !important;
+    }
+
+
+    // .leaflet-draw-actions-top.leaflet-draw-actions-bottom a {
+    //     height: 36px;
+    //     line-height: 36px;
+    // }
 
 }

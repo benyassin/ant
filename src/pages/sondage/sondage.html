@@ -1,0 +1,96 @@
+<ion-header class="no-shadow">
+  <ion-toolbar color="bee">
+    <ion-buttons left>
+      <button ion-button icon-only color="dark" (click)="goToMenu()">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back" style="color: black ! important;"></ion-icon>Back
+      </button>
+    </ion-buttons>
+
+    <ion-title text-center color="dark">
+      <ion-icon ios="ios-briefcase" md="md-briefcase" class="text-dark" style="color: black ! important;"></ion-icon>
+    <span class="text-dark">Collecte</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- Fabs -->
+  <ion-fab top right edge #fab>
+    <button ion-fab mini>
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list>
+      <button ion-fab (tap)="openFormList()" style="background-color:#ebe856 ! important;">
+        <ion-icon name="create" style="color: black ! important;"></ion-icon>
+      </button>
+      <button ion-fab (tap)="ConfirmAlertRegisterDataToDB()" style="background-color:#ebe856 ! important;">
+        <ion-icon name="document" style="color: black ! important;"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+  
+  <!-- Select of Zones -->
+  <ion-item *ngIf="showSelectZone">
+    <ion-label>Zones</ion-label>
+    <ion-select [(ngModel)]="ZoneChoisie" (ionChange)="ZoneSelected(ZoneChoisie)">
+      <ion-option value={{z.id_zone}} *ngFor="let z of ZZones">{{z.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  
+  <!-- List of collects -->
+  <ion-list #listCollect>
+    <ion-item-divider *ngIf="collectedElements.length > 0 " color="dark" class="bold" [ngStyle]="{'height':'5%'}"><h2>Liste des Entités</h2></ion-item-divider>
+    <ion-grid *ngIf="collectedElements.length > 0 ">
+      <ion-row>
+        <ion-col col-3> <div style="color:black ! important;text-align: center" > <h4>#</h4> </div></ion-col>
+        <ion-col col-3> <div style="color:black ! important;text-align: center" > <h4>Formulaire</h4> </div> </ion-col>
+        <ion-col col-3> <div style="color:black ! important;text-align: center"> <h4>N° Entité</h4> </div> </ion-col>
+        <ion-col col-3> <div style="color:black ! important;text-align: center"> <h4>Zone</h4> </div> </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-item-sliding *ngFor="let collect of collectedElements">
+      <ion-item>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3 [ngStyle]="{'background-color': collect.color}"> </ion-col>
+              <ion-col col-3> <div style="color:black ! important;" > <h2>{{collect.name}}</h2> </div> </ion-col>
+              <ion-col col-3> <div style="color:black ! important;"> <h2>{{collect.numero}}</h2> </div> </ion-col>
+              <ion-col col-3> <div style="color:black ! important;"> <h2>{{collect.zone}}</h2> </div> </ion-col>
+            </ion-row>
+          </ion-grid>
+
+      </ion-item>
+      <ion-item-options side="right">
+        <button danger (click)="showCollecte(collect)" ion-button color="primary">
+          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>Edit
+        </button>
+        <button danger (click)="removeCollecte(collect)" ion-button color="danger">
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- DIV of the Formio Form -->
+  <div id="formio" #frmio></div>
+  
+  <!-- Card Of Indication to prevent not selecting zone -->
+  <ion-card #infoCard *ngIf="showInfoCard" style="background-color:#ebe856 ! important;">    
+    <ion-card-content>
+      <ion-icon ios="ios-information-circle" md="md-information-circle" style="color: black ! important;"></ion-icon>
+        &nbsp;Veuillez choisir une zone avant de sauvegarder !
+    </ion-card-content>   
+  </ion-card>
+
+
+  <button (click)="retour()" ion-button block color="dark" *ngIf="showReturnButton">
+          <ion-icon ios="ios-return-left" md="md-return-left" style="color: black ! important;"></ion-icon>Annuler
+  </button>
+
+</ion-content>
+

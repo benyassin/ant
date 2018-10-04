@@ -21,21 +21,34 @@ export class LoginDbProvider {
 	}
 
 	createTableUsers(){
-		let sql= 'CREATE TABLE IF NOT EXISTS users(rowid INTEGER PRIMARY KEY, login TEXT, password TEXT, token TEXT, email TEXT, role TEXT,';
-		sql+= ' nom TEXT, prenom TEXT, tel TEXT, userId INT, region INT, province INT)';
+		let sql= 'CREATE TABLE IF NOT EXISTS users(rowid INTEGER PRIMARY KEY, login TEXT, password TEXT, token TEXT, refresh_token TEXT)';
 		return this.db.executeSql(sql, []);
 	}
 
 	create(user: any){
-		let sql = "INSERT INTO users (login, password) VALUES(?,?)";
-		return this.db.executeSql(sql, [user.login, user.password]);
+		let sql = "INSERT INTO users (login, password, token, refresh_token) VALUES(?,?,?,?)";
+		return this.db.executeSql(sql, [user.login, user.password, user.token, user.refresh_token]);
 	}
 
-	selectUserByParams(user: any){
+	checkIfUserExist(user: any){
 		let sql = 'SELECT * FROM users WHERE login=? AND password =?';
 		return this.db.executeSql(sql, [user.login, user.password])
 		.then(response => {
 			return Promise.resolve(response.rows.length);
+		})
+		.catch(error => Promise.reject(error));
+	}
+
+	getUserTokensByParams(user: any){
+		let sql = 'SELECT token, refresh_token FROM users WHERE login=? AND password =?';
+		return this.db.executeSql(sql, [user.login, user.password])
+		.then(response => {
+			let userData : any;
+			if(response.rows.length > 0) {
+				userData = {"token":response.rows.item(0).token, "refresh_token":response.rows.item(0).refresh_token};				
+			  }
+			// return Promise.resolve(response.rows.length);
+			return Promise.resolve(userData);
 		})
 		.catch(error => Promise.reject(error));
 	}
@@ -46,8 +59,14 @@ export class LoginDbProvider {
 	}
 
 	deleteAll(){
-		let sql = 'DELETE * FROM users';
-		return this.db.executeSql(sql, []);
+		let sql = 'DELETE FROM users';
+		return this.db.executeSql(sql, []).then(result => {
+		    console.info(result);
+		})
+		.catch( error => {
+		    console.error(error);
+		});
+	
 	}
 
 	update(user: any){

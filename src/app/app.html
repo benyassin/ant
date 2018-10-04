@@ -1,1 +1,13 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<div *ngIf="showSplash" class="splash">
+
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+
+</div>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->

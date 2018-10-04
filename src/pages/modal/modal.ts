@@ -2,12 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 
-/**
- * Generated class for the ModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -16,26 +10,27 @@ import { ViewController } from 'ionic-angular';
 })
 export class ModalPage {
 
-	listeQuestionnaires: any;
+  listeFormulaires: any;
   constructor(public navCtrl: NavController, public viewCtrl : ViewController , public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPage');
-    console.log(this.navParams.get('message'));
-    // this.listeQuestionnaires ="";
-    this.listeQuestionnaires = this.navParams.get('message');
+    console.log(this.navParams.get('forms'));
+    this.listeFormulaires = this.navParams.get('forms');
   }
 
   public fermerModal(data){
     this.viewCtrl.dismiss(data);
   }
 
-  getSelectedQuestionnaire(id, name){
-    console.info(id+" - "+name);
+  getSelectedForm(id, name, color, schema){
+    console.info(id + " - " + name + " - " + color+ " - " + schema);
     let data = {
       id: id,
-      name: name
+      name: name,
+      color: color,
+      schema: schema
     };
     this.fermerModal(data);
   }

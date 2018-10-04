@@ -1,41 +1,52 @@
-<!--
-  Generated template for the ModalPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
+  <ion-navbar>
+      <ion-title>Zones de Travail</ion-title>
+      <ion-buttons end>
+      <button ion-button (click)="fermerModal()">X</button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+    
+<ion-content padding>
+    
+  <ion-list radio-group [(ngModel)]="mode" style="display: inline-flex; width:100%">
+    <ion-item-divider color="dark" class="bold" [ngStyle]="{'height':'5'}"><div style="color:white !important;">Mode</div></ion-item-divider>
 
-    <ion-navbar>
-        <ion-title>Zones de Travail</ion-title>
-        <ion-buttons end>
-        <button ion-button (click)="fermerModal()">X</button>
-        </ion-buttons>
-    </ion-navbar>
-    
-    </ion-header>
-    
-    
-    <ion-content padding>
-    
-    <!-- <ion-list>
-      <ion-item *ngFor="let q of listeQuestionnaires">
-      <ion-radio checked="0" value="{{q.id}}">{{q.name}}</ion-radio>
-      </ion-item>
-    </ion-list>
-     -->
-    
-    
-     <ion-list radio-group >
-        <!-- <ion-list-header> Action </ion-list-header> -->
-      <ion-item *ngFor="let q of listeQuestionnaires">
-        <ion-label>{{ q.name }}</ion-label>
-        <ion-radio color="bee" item-left [value]="q.id" (click)="getSelectedQuestionnaire(q.id,q.name)" [ngStyle]="{'color': 'black'}"></ion-radio>
-      </ion-item>
-    </ion-list>
-    
-    
-    
-    
-    </ion-content>
+    <ion-item>
+      <ion-label>New</ion-label>
+      <ion-radio value="new" checked="true"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Edit</ion-label>
+      <ion-radio value="edit"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group >
+    <ion-item-divider color="dark" class="bold" [ngStyle]="{'height':'5%','color':'white'}">
+      <div style="color:white !important;">Zones de travail</div>
+    </ion-item-divider>
+
+    <!-- <ion-item>
+      <ion-range min="0" max="1" step="1" [(ngModel)]="saturation" color="secondary">
+        <ion-label range-left><ion-icon name="add"></ion-icon></ion-label>
+        <ion-label range-right><ion-icon name="create"></ion-icon></ion-label>
+      </ion-range>
+    </ion-item> -->
+
+    <!-- <ion-list-header> Action </ion-list-header> -->
+    <ion-item *ngFor="let q of listeQuestionnaires">
+      <ion-label>{{ q.id_area }} - {{ q.name }} - {{ q.id_campaign }}</ion-label>
+      <ion-radio color="bee" item-left [value]="q.id_area" (click)="getSelectedQuestionnaire(q.id_area,q.name,q.id_campaign)" [ngStyle]="{'color': 'black'}"></ion-radio>
+    </ion-item>
+
+      <!-- <ion-item>
+        <ion-label>Mushrooms</ion-label>
+        <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+      </ion-item> -->
+
+  </ion-list>
+  
+</ion-content>
     

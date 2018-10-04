@@ -1,6 +1,27 @@
 page-menu {
+    .scroll-content {
+        overflow-y: hidden !important;                                          
+    }
+
     .label{
         color: black;
         padding:0;
     }
+
+    .icon-md{
+        color:white !important;
+    }
+    .logo {
+        width: 90%;
+        height: auto;
+        padding-top: 9vh;
+        margin-bottom: 0;
+      }
+      
+
+ .scroll-content {
+    overflow-y: auto !important;
+ }
+ 
+ 
 }

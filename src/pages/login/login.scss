@@ -1,5 +1,8 @@
 page-login {
 
+  .scroll-content {
+    overflow-y: hidden !important;                                          
+  }
 // .scroll-content {
 //     display: table !important;
 //     width: 100% !important;
@@ -20,7 +23,7 @@ page-login {
   }
   .logo {
     width: 70%;
-    height: auto;
+    height: 50%;
     padding-top: 9vh;
     margin-bottom: 15vh;
   }

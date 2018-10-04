@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Campagnes à synchroniser</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="fermerModal()">X</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group>
+    <ion-item *ngFor="let l of listeCampaigns">
+      <ion-label> {{ l.name }} - {{ l.id_campaign }}</ion-label>
+      <ion-radio color="bee" item-left [value]="l.id_campaign" (click)="getSelectedCampaign(l.name,l.id_campaign)" [ngStyle]="{'color': 'black'}"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+
+
+
+</ion-content>

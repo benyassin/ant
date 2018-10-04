@@ -7,11 +7,11 @@
 <ion-header>
   <ion-toolbar color="bee">
     <ion-title text-center color="dark">
-    	<ion-icon ios="ios-menu" md="md-menu"></ion-icon> &nbsp;Menu
+    	<ion-icon ios="ios-menu" md="md-menu" color="dark" style="color: black ! important;"></ion-icon> &nbsp;Menu
     </ion-title>
     <ion-buttons start>
-      <button ion-button icon-only color="dark">
-            <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>LogOut
+      <button ion-button icon-only color="dark" (tap)="goToLogin()" >
+            <ion-icon ios="ios-log-out" md="md-log-out" style="color: black ! important;"></ion-icon>LogOut
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -25,20 +25,51 @@
 
 <ion-content padding>
 
-	<!-- <div class="padding"> -->
-	<ion-grid>
-	    <button ion-button full round large (tap)="goToParametrage()" padding>
-	    	<ion-icon ios="ios-switch" md="md-switch" isActive="false"></ion-icon>&nbsp;Paramétrage
-	    </button>  
-	      <button ion-button full round large (tap)='goToCollecte()' padding>
-	      	<ion-icon ios="ios-map" md="md-map" isActive="false"></ion-icon>&nbsp;Collecte
-	    </button>  
-	     <button ion-button full round large (tap)='synchronisation()' padding>
-	      	<ion-icon ios="ios-cloud-upload" md="md-cloud-upload" isActive="false"></ion-icon>&nbsp;Synchronisation
-	    </button>  
-	</ion-grid>
-	<!-- </div> -->
+  <ion-grid style="height: 30%; width:100%;">
 
-</ion-content>
+    <ion-row>
+      <ion-col col-12 align-self-end>
+        <button ion-button full round large color="dark" (tap)="goToParametrage()" padding>
+          <ion-icon ios="ios-switch" md="md-switch" isActive="false"></ion-icon>&nbsp;Paramétrage
+        </button>  
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 align-self-end>
+        <button ion-button full round large color="dark" (tap)='goToCollect()' padding>
+          <ion-icon ios="ios-map" md="md-map" isActive="false"></ion-icon>&nbsp;Collecte
+        </button>  
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 align-self-end>
+        <!-- <button ion-button full round large color="dark" (tap)='goToFormulaire()' padding> -->
+        <button ion-button full round large color="dark" (tap)='nonGeometric()' padding>
+          <ion-icon ios="ios-map" md="md-map" isActive="false"></ion-icon>&nbsp;Non geomtric 
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 align-self-end>
+        <button ion-button full round large color="dark" (tap)='synchronisation()' padding>
+        <ion-icon ios="ios-cloud-upload" md="md-cloud-upload" isActive="false"></ion-icon>&nbsp;Synchronisation
+        </button>  
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid style="height: 30%; width:100%;">
+    <ion-row >
+      <ion-col style="height: 100%;"> 
+        <img class="logo" src="assets/imgs/beeGO.png" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </ion-content>
 
 
